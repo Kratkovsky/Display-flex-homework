@@ -1,54 +1,56 @@
 :root {
+  font-family: Arial, Helvetica, sans-serif;
   --main-font-size: 18px;
+  --secondary-color: #333;
 }
 
 body {
   text-align: center;
   line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  background: #333;
+  background: var(--secondary-color);
   font-size: var(--main-font-size);
 }
 
 .header {
+  background: url(../img/header.png) center no-repeat;
+  background-size: cover;
   color: white;
+  opacity: 0.5;
+}
+
+.header::before {
+  content: '';
+  background: var(--secondary-color);
 }
 
 .heading-container {
-  min-height: 47vh;
-  background: url(../img/header.png) center no-repeat;
-  background-size: cover;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-heading {
-  padding-top: 10vh;
+  padding-top: 100px;
   font-size: 36px;
   font-weight: bold;
 }
 
-.heading-text,
-.link-top {
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
 .heading-text {
-  max-width: 45vw;
+  padding-top: 20px;
 }
 
 .link-top {
-  padding: 15px 30px;
-  max-width: 100px;
+  margin-top: 22px;
+  margin-bottom: 140px;
+  padding: 17px 34px;
   border: 1px solid white;
-  background: #333;
+  background: var(--secondary-color);
 }
 
 .link-top:hover {
   background-color: #eaeaea;
-  color: #333;
+  color: var(--secondary-color);
 }
 
 .white-block {
@@ -56,13 +58,16 @@ body {
 }
 
 .white-block-heading {
+  color: var(--secondary-color);
   padding: 25px 0px;
   font-size: 26px;
   font-weight: bold;
 }
 
-.white-block-text {
-  padding-bottom: 50px;
+.top-white-text {
+  columns: 2;
+  padding: 0 480px 50px 480px;
+  color: var(--secondary-color);
 }
 
 .card-container {
@@ -101,19 +106,20 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 47vw;
+  padding-bottom: 50px;
 }
 
 .bottom-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 30vh;
 }
 
 .blue-block,
 .grey-block {
   width: 50%;
   color: white;
+  padding-bottom: 50px;
 }
 
 .blue-block {
@@ -121,7 +127,7 @@ body {
 }
 
 .grey-block {
-  background: #333;
+  background: var(--secondary-color);
 }
 
 .blue-block-title {
@@ -132,9 +138,6 @@ body {
 
 .blue-block-text {
   padding: 0px 15px 30px 0px;
-}
-
-.link-bottom {
 }
 
 .footer {
