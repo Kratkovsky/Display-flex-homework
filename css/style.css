@@ -1,6 +1,7 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
   --main-font-size: 18px;
+  --secondary-font-size: 1.2rem;
   --titles-font-size: 1.8rem;
   --secondary-color: #333;
   font-size: var(--main-font-size);
@@ -31,7 +32,6 @@ body {
 .heading-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -42,38 +42,49 @@ body {
 }
 
 .heading-text {
-  font-size: 1.3rem;
   padding-top: 20px;
 }
 
+.overall-font-size {
+  font-size: 1.2rem;
+}
+
 .link-top {
-  margin-top: 22px;
+  margin-top: 30px;
   margin-bottom: 140px;
-  padding: 17px 34px;
-  border: 1px solid white;
+  padding: 23px 43px;
+  border: 1px solid darkgrey;
   background: var(--secondary-color);
 }
 
-.link-top:hover {
+.link-top:hover,
+.link-top:focus {
   background-color: #eaeaea;
   color: var(--secondary-color);
 }
 
 .white-block {
+  display: flex;
+  flex-direction: column;
   background: #eaeaea; 
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .white-block-heading {
   color: var(--secondary-color);
-  padding: 25px 0px;
+  padding: 30px 0px;
   font-size: var(--titles-font-size);
   font-weight: bold;
 }
 
 .top-white-text {
-  columns: 2;
-  padding: 0 480px 50px 480px;
+  column-count: 2;
   color: var(--secondary-color);
+  padding-bottom: 50px;
 }
 
 .card-container {
@@ -96,7 +107,7 @@ body {
 .card-title {
   padding: 40px 20px;;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .card-text {
@@ -112,7 +123,8 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 47vw;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 60px;
 }
 
 .bottom-container {
@@ -125,7 +137,7 @@ body {
 .grey-block {
   width: 50%;
   color: white;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .blue-block {
@@ -143,13 +155,15 @@ body {
 }
 
 .blue-block-text {
-  padding: 0px 15px 30px 0px;
+  padding-bottom: 20px;
 }
 
 .footer {
   display: flex;
   background-color: black;
   color: white;
+  font-size: 1.3rem;
+  padding: 20px 0;
 }
 
 .footer-container {
@@ -167,3 +181,7 @@ body {
   padding-left: 2px;
   color: #2690d4;
 }
+
+
+/* 
+ */
